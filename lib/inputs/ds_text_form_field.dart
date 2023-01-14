@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 class DSTextFormField extends StatefulWidget {
   final String? label;
   final TextInputType? keyboardType;
-  const DSTextFormField({super.key, this.keyboardType, this.label});
+  const DSTextFormField({
+    super.key,
+    this.keyboardType,
+    this.label,
+  });
 
   factory DSTextFormField.currency({
     Key? key,
     TextInputType? keyboardType,
-    final String? label,
+    String? label,
   }) {
     return DSTextFormField(
       key: key,
@@ -23,6 +27,9 @@ class DSTextFormField extends StatefulWidget {
 class _DSTextFormFieldState extends State<DSTextFormField> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return DSTextFormField(
+      label: widget.label,
+      keyboardType: widget.keyboardType,
+    );
   }
 }
