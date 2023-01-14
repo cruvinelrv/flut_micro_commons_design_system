@@ -27,9 +27,12 @@ class DSTextFormField extends StatefulWidget {
 class _DSTextFormFieldState extends State<DSTextFormField> {
   @override
   Widget build(BuildContext context) {
-    return DSTextFormField(
-      label: widget.label,
+    return TextFormField(
       keyboardType: widget.keyboardType,
+      decoration: InputDecoration(
+        labelText: widget.label,
+        border: const OutlineInputBorder(),
+      ),
     );
   }
 }
